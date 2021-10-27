@@ -1,0 +1,237 @@
+<!-- START HOME -->
+<div class="wrap-home">
+    <div class="row">
+        <!-- START MAIN CONTENT -->
+        <div class="col-lg-8">
+            <!-- START POST VIDEO
+            ================================ -->
+            <div class="wrap-post">
+
+                <!-- TITLE POST -->
+                <div class="row">
+                    <div class="col-md-8 wrap-title">
+                        <h3>Videos</h3>
+                        <a href="javascript:;">Browse All Videos</a>
+                    </div>
+                </div>
+
+                <!-- WRAP LIST POSTS -->
+                <div class="row space" id="masonryVideos">
+                    <div class="col-md-4 col-sm-6 grid-sizer"></div>
+
+                    <!-- LIST CONTENT POST -->
+                    <ng-container *ngFor="let item of videos;let i = index">
+                        <div class="grid" [class.col-md-4]="i!=0" [class.col-md-8]="i==0" [class.col-sm-6]="i!=0" [class.col-sm-12]="i==0">
+                            <div class="item-post">
+                                <img [src]="item.image" alt="" class="img-post">
+                                <div class="view-user">
+                                    <div>
+                                        <h3 *ngIf="i==0" class="title">{{item.title}}</h3>
+                                        <h4 *ngIf="i!=0" class="sub-title">{{item.title}}</h4>
+                                        <h5 class="username">{{item.user}}</h5>
+                                    </div>
+                                    <span class="views">{{item.viewer}} views</span>
+                                </div>
+                                <a href="javascript:;" class="link-post"></a>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <!-- AND LIST CONTENT POST -->
+
+                    <!-- UPLOAD POST -->
+                    <div class="col-md-4 grid">
+                        <div class="item-action">
+                            <img src="../../../assets/images/masonry-child-primary.png" alt="">
+                            <div class="content">
+                                <img src="../../../assets/icon/img-arrow-up.png" alt="" class="img-upload">
+                                <div class="desc">
+                                    Upload
+                                    <div>Your Own Upload</div>
+                                </div>
+                            </div>
+                            <a href="javascript:;" class="link"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- AND POST -->
+
+            <!-- START POSTS PEOPLE
+            ================================ -->
+            <div class="wrap-post">
+
+                <!-- TITLE POST -->
+                <div class="row">
+                    <div class="col-md-8 wrap-title">
+                        <h3>People</h3>
+                        <a href="javascript:;">View All</a>
+                    </div>
+                </div>
+
+                <!-- WRAP LIST POSTS -->
+                <div class="row space" id="masonryPeople">
+                    <div class="col-md-4 col-sm-6 grid-sizer"></div>
+
+                    <!-- LIST CONTENT POST -->
+                    <ng-container *ngFor="let item of people;let i = index">
+                        <div class="grid" [class.col-md-4]="i!=0" [class.col-md-8]="i==0" [class.col-sm-6]="i!=0" [class.col-sm-12]="i==0">
+                            <div class="item-post">
+                                <img [src]="item.image" alt="" class="img-post">
+                                <div class="view-user">
+                                    <div>
+                                        <h3 *ngIf="i==0" class="title">{{item.title}}</h3>
+                                        <h4 *ngIf="i==0" class="title">
+                                            {{(i==0) ? item.user : item.title}}
+                                        </h4>
+                                        <h5 class="username">
+                                            {{(i==0) ? item.title : item.user }}
+                                        </h5>
+                                    </div>
+                                </div>
+                                <a href="javascript:;" class="link-post"></a>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <!-- AND LIST CONTENT POST -->
+
+                    <!-- UPLOAD POST -->
+                    <div class="col-md-4 grid">
+                        <div class="item-action">
+                            <img src="../../../assets/images/masonry-child-primary.png" alt="">
+                            <div class="content">
+                                <img src="../../../assets/icon/cearcli.png" alt="" class="img-upload">
+                                <div class="desc">
+                                    How
+                                    <div>Your Work</div>
+                                </div>
+                            </div>
+                            <a href="javascript:;" class="link"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- AND LIST POST -->
+
+            </div>
+            <!-- AND POSTS -->
+
+            <!-- START POST DOCUMENTS
+            ================================ -->
+            <div class="wrap-post">
+
+                <!-- TITLE POST -->
+                <div class="row">
+                    <div class="col-md-8 wrap-title">
+                        <h3>Documents</h3>
+                        <a href="javascript:;">Browse All Documents</a>
+                    </div>
+                </div>
+
+                 <!-- WRAP LIST POSTS -->
+                <div class="row space" id="masonryDocs">
+                    <div class="col-md-4 col-sm-6 grid-sizer"></div>
+
+                    <!-- LIST CONTENT POST -->
+                    <ng-container *ngFor="let item of documents;let i = index">
+                        <div class="grid" [class.col-md-4]="i!=0" [class.col-md-8]="i==0" [class.col-sm-6]="i!=0" [class.col-sm-12]="i==0">
+                            <div class="item-post">
+                                <img [src]="item.image" alt="" class="img-post">
+                                <div class="view-user" [ngStyle]="{'display': i==0 ? 'flex' : 'block'}">
+                                    <div>
+                                        <h3 *ngIf="i==0" class="title">{{item.title}}</h3>
+                                        <h5 *ngIf="i==0" class="username">{{item.user}}</h5>
+                                    </div>
+                                    <h4 *ngIf="i!=0" class="sub-title">{{item.title}}</h4>
+                                    <span class="views" [ngStyle]="{'margin-left.px': i==0 ? 15 : 0}">{{item.viewer}} views</span>
+                                </div>
+                                <a href="javascript:;" class="link-post"></a>
+                            </div>
+                        </div>
+                    </ng-container>
+                    <!-- AND LIST CONTENT POST -->
+
+                    <!-- UPLOAD POST -->
+                    <div class="col-md-4 grid">
+                        <div class="item-action">
+                            <img src="../../../assets/images/masonry-child-primary.png" alt="">
+                            <div class="content">
+                                <img src="../../../assets/icon/add.png" alt="" class="img-upload">
+                                <div class="desc">
+                                    Share
+                                    <div>Your Document</div>
+                                </div>
+                            </div>
+                            <a href="javascript:;" class="link"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- AND LIST POST -->
+
+            </div>
+            <!-- AND POST -->
+        </div>
+        <!-- END MAIN CONTENT -->
+
+        <!-- START SIDEBAR -->
+        <div class="col-lg-4">
+            <!-- START WIDGET -->
+            <div class="widget">
+                <div class="widget-title">
+                    <div class="flex-fill">
+                        <h3 class="title">Activity</h3>
+                    </div>
+                    <div>
+                        <a href="javascript:;">View timeline</a> / <a href="javascript:;">Filter Activites</a>
+                    </div>
+                </div>
+
+                <!-- START POST ACTIVITY -->
+                <div class="post-activity" *ngFor="let item of activity">
+                    <div class="wrap-image">
+                        <img [src]="item.image" alt="activity image" />
+                    </div>
+                    <div class="content flex-fill">
+                        <h5 class="name">
+                            {{item.user}}
+                            <small>{{item.activity}}</small>
+                        </h5>
+                        <p class="mb-0">{{item.description}}</p>
+                        <span><i class="{{item.icon}}"></i> {{moment(item.time_elapsed).fromNow()}}</span>
+                    </div>
+                    <a href="javascript:;" class="post-link"></a>
+                    <a href="javascript:;" class="post-close">
+                        <img src="../../../assets/images/close-hover.png" alt="">
+                    </a>
+                </div>
+                <!-- END POST ACTIVITY -->
+                
+            </div>
+            <!-- END WIDGET -->
+
+            <!-- START WIDGET -->
+            <div class="widget">
+                <div class="widget-title">
+                    <div class="flex-fill">
+                        <h3 class="title">Channels</h3>
+                    </div>
+                    <div>
+                        <a href="javascript:;">Browse all channels</a>
+                    </div>
+                </div>
+                <div class="row row-channel">
+                    <div class="col-6" *ngFor="let item of chanells">
+                        <a href="javascript:;" class="item-channel">
+                            <img [src]="item.image" alt=""/>
+                            <span>{{item.channel}}</span>
+
+                            <a href="javascript:;" class="add-channel">
+                                <img src="../../../assets/images/add-hover.png" alt="">
+                            </a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END SIDEBAR -->
+    </div>
+</div>
+<!-- END HOME -->

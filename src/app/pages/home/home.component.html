@@ -79,14 +79,14 @@
                                 <img [src]="item.image" alt="" class="img-post">
                                 <div class="view-user">
                                     <div>
-                                        <h3 *ngIf="i==0" class="title">{{item.title}}</h3>
-                                        <h4 *ngIf="i==0" class="title">
-                                            {{(i==0) ? item.user : item.title}}
-                                        </h4>
+                                        <h3 *ngIf="i==0" class="title">
+                                            {{(i==0) ? item.user : item.title }}
+                                        </h3>
                                         <h5 class="username">
                                             {{(i==0) ? item.title : item.user }}
                                         </h5>
                                     </div>
+                                    <span *ngIf="i==0" class="views">{{item.viewer}} views</span>
                                 </div>
                                 <a href="javascript:;" class="link-post"></a>
                             </div>
